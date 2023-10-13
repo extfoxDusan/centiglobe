@@ -1,0 +1,57 @@
+.payment-view {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 2rem auto;
+
+  &-box {
+    width: auto;
+    height: auto;
+    overflow-x: auto;
+    max-width: 100%;
+    border-radius: 14px;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    display: inline-block;
+    padding: 3rem;
+  }
+
+  &-field {
+    text-transform: uppercase;
+    color: gray;
+    display: grid;
+    margin-bottom: 0.5rem;
+  }
+
+  &-field span {
+    color: black;
+    font-weight: 600;
+    text-transform: unset;
+  }
+
+  .payment-status {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .payment-view {
+    width: 100%;
+    margin-top: 1rem !important;
+
+    &-box {
+      padding: 1rem !important;
+    }
+
+    &-field {
+      font-size: 10px !important;
+    }
+
+    &-field span {
+      font-size: 9px !important;
+      word-wrap: break-word !important;
+      overflow: auto !important;
+    }
+  }
+}

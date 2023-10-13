@@ -1,0 +1,59 @@
+.payment-amount-container {
+  width: auto;
+  height: auto;
+  overflow-x: auto;
+  max-width: 100%;
+  margin: 1rem;
+  background-color: white;
+  border-radius: 14px;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  display: inline-block;
+  padding: 3rem;
+
+  > h1 {
+    margin-bottom: 0 !important;
+  }
+
+  .payment-date {
+    color: green;
+    font-size: small;
+    margin-bottom: 2rem !important;
+  }
+
+  .payment-name {
+    color: gray;
+    margin-top: 1rem !important;
+    display: grid;
+
+    > span {
+      color: black !important;
+      font-size: large;
+      font-weight: 600;
+    }
+  }
+
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    color: gray;
+
+    > div {
+      display: inline-grid;
+
+      > span {
+        font-size: large;
+        font-weight: 600;
+        color: black !important;
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .payment-amount-container {
+    width: auto;
+    overflow-x: auto;
+    max-width: 100%;
+  }
+}

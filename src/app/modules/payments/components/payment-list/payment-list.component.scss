@@ -1,0 +1,66 @@
+.table {
+  width: auto;
+  overflow-x: auto;
+  max-width: 100%;
+  margin-bottom: 1rem;
+  margin: 1rem;
+  background-color: white;
+  border-radius: 14px;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+
+  .mat-cell,
+  .mat-header-cell {
+    flex: 1;
+    text-align: left;
+    padding: 10px 16px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  .mat-mdc-cell {
+    padding: 16px;
+  }
+}
+
+.table .view-id {
+  color: black !important;
+  cursor: pointer;
+  text-decoration: unset !important;
+}
+
+@media (max-width: 600px) {
+  .table {
+    width: auto !important;
+    margin-bottom: 1rem !important;
+  }
+
+  .mat-header-row,
+  .mat-row {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .mat-cell,
+  .mat-header-cell {
+    flex: none;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .mat-mdc-paginator-range-actions {
+    display: contents !important;
+  }
+}
+
+.accepted-chip {
+  background-color: #4caf50 !important;
+  color: #2e7030 !important;
+}
+
+.rejected-chip {
+  background-color: rgb(224, 127, 127) !important;
+  color: #b4332a !important;
+}

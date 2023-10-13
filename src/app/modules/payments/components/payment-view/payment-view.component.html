@@ -1,0 +1,32 @@
+<ng-container>
+  <div class="payment-view">
+    <div class="payment-view-box">
+      <div class="payment-status" *ngIf="payment?.state == 'ACCEPTED'">
+        <img src="assets/img/icons8-done-64.png" alt="Check Icon" />
+      </div>
+
+      <div class="payment-status" *ngIf="payment?.state !== 'ACCEPTED'">
+        <img src="assets/img/icons8-x-80.png" alt="X Icon" />
+      </div>
+
+      <div class="payment-view-field">Payment ID
+        <span> {{payment?.paymentId}}</span>
+      </div>
+      <div class="payment-view-field">Payment Ref
+        <span> {{payment?.paymentRef}}</span>
+      </div>
+      <div class="payment-view-field"> Created
+        <span>{{payment?.createdAt | date: 'medium'}}</span>
+      </div>
+      <div class="payment-view-field"> Paying Member Name
+        <span> {{payment?.payinMemberName}}</span>
+      </div>
+      <div class="payment-view-field"> Payout Member Name
+        <span> {{payment?.payoutMemberName}}</span>
+      </div>
+      <div class="payment-view-field"> Payout ID
+        <span> {{payment?.payoutId}}</span>
+      </div>
+    </div>
+  </div>
+</ng-container>

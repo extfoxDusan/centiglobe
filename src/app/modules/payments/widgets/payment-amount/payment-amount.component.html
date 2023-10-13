@@ -1,0 +1,23 @@
+<div class="payment-amount-container" *ngIf="latestPayment$ | async as latestPayment">
+
+  <h1>Last Payment Amount</h1>
+  <span class="payment-date">Created: {{latestPayment.createdAt | date:'medium' }}</span>
+  <div>
+    <p class="payment-name">Member Name:
+      <span>{{latestPayment.payinMemberName}}</span>
+    </p>
+  </div>
+
+  <div class="payment-amount-container__info">
+    <div>
+      Name
+      <span>{{latestPayment.paymentAmount.assetName}}</span>
+    </div>
+
+    <div>
+      Amount
+      <span>{{latestPayment.paymentAmount.amount}}</span>
+    </div>
+  </div>
+
+</div>
