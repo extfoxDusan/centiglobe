@@ -1,10 +1,15 @@
+$white: white;
+$green: green;
+$gray: gray;
+$black: black;
+
 .payment-amount-container {
   width: auto;
+  max-width: 100%;
   height: auto;
   overflow-x: auto;
-  max-width: 100%;
   margin: 1rem;
-  background-color: white;
+  background-color: $white;
   border-radius: 14px;
   border: 1px solid rgba(0, 0, 0, 0.12);
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
@@ -12,22 +17,22 @@
   padding: 3rem;
 
   > h1 {
-    margin-bottom: 0 !important;
+    margin-bottom: 0;
   }
 
   .payment-date {
-    color: green;
+    color: $green;
     font-size: small;
-    margin-bottom: 2rem !important;
+    margin-bottom: 2rem;
   }
 
   .payment-name {
-    color: gray;
-    margin-top: 1rem !important;
+    color: $gray;
+    margin-top: 1rem;
     display: grid;
 
     > span {
-      color: black !important;
+      color: $black;
       font-size: large;
       font-weight: 600;
     }
@@ -36,7 +41,7 @@
   &__info {
     display: flex;
     justify-content: space-between;
-    color: gray;
+    color: $gray;
 
     > div {
       display: inline-grid;
@@ -44,7 +49,7 @@
       > span {
         font-size: large;
         font-weight: 600;
-        color: black !important;
+        color: $black;
       }
     }
   }

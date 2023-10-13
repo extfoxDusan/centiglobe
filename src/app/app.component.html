@@ -1,13 +1,10 @@
-<header fxLayout="row" fxLayout.xs="column" fxLayoutAlign="space-between center">
+<header class="header" fxLayout="row" fxLayout.xs="column" fxLayoutAlign="space-between center">
   <div fxFlex="100%" fxFlex.xs="100%">
-    <!-- Left content of the header -->
-    <img
-      src="https://static.wixstatic.com/media/4385e0_f7ba8c30256b4319bf8021cccfea08e8~mv2.png/v1/fill/w_181,h_71,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/Logo.png"
-      alt="CentiGlobal">
+    <img class="header-logo" src="/assets/img/Logo.svg" alt="CentiGlobe">
   </div>
   <div class="header-button" fxFlex="50%" fxFlex.xs="100%">
-    <!-- Right content of the header -->
-    <button mat-raised-button [routerLink]="['/payments']" color="primary">Payments</button>
+    <button *ngIf="isLoggedIn()" mat-raised-button [routerLink]="['/payments']" color="primary">Payments</button>
+    <button *ngIf="isLoggedIn()" mat-raised-button (click)="logout()" color="warn">Logout</button>
   </div>
 </header>
 <router-outlet></router-outlet>

@@ -13,7 +13,9 @@ export class AuthInterceptor implements HttpInterceptor {
   intercept(req: HttpRequest<any>, next: HttpHandler) {
     const jwtToken =
       this.auth.currentUser !== null
-        ? this.auth.currentUser.signInUserSession?.accessToken.jwtToken
+        ? this.auth.currentUser.signInUserSession
+            ?.getAccessToken()
+            .getJwtToken()
         : '';
 
     if (jwtToken) {

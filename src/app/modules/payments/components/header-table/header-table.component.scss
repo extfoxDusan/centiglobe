@@ -1,15 +1,17 @@
+$white: #fff;
+
 header {
   display: flex;
   justify-content: space-between;
   width: 100%;
   top: 0;
-  background-color: #fff;
+  background-color: $white;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
 
-.header-button {
-  display: flex;
-  align-items: center;
-  text-align: center;
-  padding-right: 2rem;
+  &-button {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    padding-right: 2rem;
+  }
 }

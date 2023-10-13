@@ -12,6 +12,15 @@ export class AuthorizationService {
 
   constructor(private router: Router) {}
 
+  async autoLogin(): Promise<void> {
+    await Auth.currentAuthenticatedUser({
+      bypassCache: true,
+    }).then((user) => {
+      this.currentUser = user;
+      this.router.navigate(['payments']);
+    });
+  }
+
   login(username: string, password: string): Observable<any> {
     return from(Auth.signIn(username, password)).pipe(
       tap((user) => {
@@ -26,7 +35,7 @@ export class AuthorizationService {
     return from(Auth.signOut()).pipe(
       tap(() => {
         this.currentUser = null;
-        this.router.navigate(['authorization']);
+        this.router.navigate(['authorization/login']);
       })
     );
   }
